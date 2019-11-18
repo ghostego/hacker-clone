@@ -1,18 +1,21 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import { ThemeProvider } from "styled-components";
+import List from "components/List";
+import { colorsDark } from "styles/palette";
+
+import { Wrapper, Title } from "./style";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <ThemeProvider theme={colorsDark}>
+        <div>
+          <Wrapper>
+            <Title>Hacker News Reader</Title>
+            <List />
+          </Wrapper>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      </ThemeProvider>
     );
   }
 }
