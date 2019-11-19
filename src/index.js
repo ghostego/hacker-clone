@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import configureStore from "store";
 import App from "components/App";
 import GlobalStyles from "styles/global";
-// import registerServiceWorker from "./registerServiceWorker";
+import registerServiceWorker from "./registerServiceWorker";
 
 const renderApp = () => {
   const store = configureStore({});
@@ -24,4 +24,4 @@ const renderApp = () => {
   );
 };
 renderApp();
-// registerServiceWorker;
+registerServiceWorker();
